@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://lumiopathways.co.uk/assessment">
 <title>Lumio Pathways — Free SEN Assessment</title>
-<meta name="description" content="Take the free Lumio Pathways SEN assessment. 12 clinically validated questions. Your child's strengths and needs profile generated instantly.">
+<meta name="description" content="Take the free Lumio Pathways SEN assessment. 13 clinically validated questions. Your child's strengths and needs profile generated instantly.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -167,7 +168,7 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 
     <p class="info-sub">This helps us calibrate the assessment for your child's age and generate the most accurate profile possible.</p>
     <div class="fg">
       <label>Your child's first name</label>
-      <input type="text" id="childName" placeholder="e.g. Amara">
+      <input type="text" id="childName" placeholder="e.g. Amara" oninput="childName=this.value.trim()" onchange="childName=this.value.trim()">
     </div>
     <div class="fg">
       <label>Your child's age</label>
@@ -262,7 +263,7 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 
       <input type="email" id="parentEmail" placeholder="your@email.com">
     </div>
     <button class="btn-gold" onclick="saveResults()">Save results and continue &rarr;</button>
-    <p class="email-note">We will send you a confirmation email. We will never share your details with third parties. You can delete your account at any time. Lumio Pathways Ltd, ICO Registration C2001425.</p>
+    <p class="email-note">By continuing you agree to our <a href="/privacy-policy.html" style="color:#EF9F27;text-decoration:underline">Privacy Policy</a>. We will send you a confirmation email. We will never share your details with third parties. You can delete your account at any time. Lumio Pathways Ltd, ICO Registration C2001425.</p>
   </div>
 
   <!-- SCREEN 5: APP DOWNLOAD -->
@@ -396,7 +397,7 @@ var parentEmail = '';
 var domainMap = [
   {name:'Communication', qs:[0,1], color:'#1D9E75'},
   {name:'Social interaction', qs:[2,3], color:'#185FA5'},
-  {name:'Sensory processing', qs:[4,5], color:'#D85A30'},
+  {name:'Sensory processing', qs:[4,5,6], color:'#D85A30'},
   {name:'Learning', qs:[6,7,8], color:'#EF9F27'},
   {name:'Emotional regulation', qs:[9,10,11], color:'#9B59B6'},
 ];
